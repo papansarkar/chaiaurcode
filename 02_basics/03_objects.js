@@ -50,3 +50,24 @@ JsUser.greeting2 = function(){
 
 JsUser.greeting()
 JsUser.greeting2()
+
+
+//An object only allows strings and symbols as keys (non-string keys are coerced into strings).
+const obj = {};
+obj['stringKey'] = 'value'; // Valid
+obj[1] = 'numberValue';      // Coerced to string: "1"
+obj[{}] = 'objectValue';     // Coerced to string: "[object Object]"
+
+
+// objects don't guarranty original iteration order, 
+const obj1 = {};
+obj1['b'] = 2;
+obj1['a'] = 1;
+obj1['c'] = 3;
+
+for (const key in obj1) {
+  console.log(key, obj1[key]); // Order may vary
+}
+
+//To determine the size of an object, you need to use Object.keys() or Object.entries() to count the number of keys.
+console.log(Object.keys(obj1).length);
