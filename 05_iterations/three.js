@@ -1,4 +1,5 @@
-// for of
+// for...of
+// iterate over iterable objects
 
 const arr = [1, 2, 3, 4, 5]
 
@@ -28,7 +29,9 @@ map1.set("a", 2) // unique key-value
 map1.set("b", 537)
 // console.log(map1);
 
-// getter 
+
+
+// +++++++++++ getter  ++++++++++++++
 
 // console.log(map1.get("a"))
 
@@ -53,12 +56,35 @@ map2.set({a:"b"}, "object")
 map2.set({a:"b"}, "object")
 
 
-console.log(map2)
+// console.log(map2)
 
 // solution for object in map as key (getter)
 
 const obj = {a:"b", c: "d"}
 
-map2.set(obj, "ref obj")
-console.log(map2)
-console.log(map2.get(obj)) 
+// map2.set(obj, "ref obj")
+// console.log(map2)
+// console.log(map2.get(obj)) 
+
+
+
+
+// ++++++++++++++++++++++++ Loop in map +++++++++++++++++++++
+
+const map3 = new Map()
+
+map3.set('IN', "India")
+map3.set('Fr', "France")
+map3.set('USA', "United States Of America") 
+
+// for(const value of map3){
+//     console.log(value);
+// }
+
+// for(const [key] of map3){
+//     console.log(key);
+// }
+
+for(const [key, value] of map3){ // array destructuring
+    console.log(value);
+}
