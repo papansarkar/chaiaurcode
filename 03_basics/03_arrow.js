@@ -65,6 +65,29 @@ const returnObject = () => ({username: "Papan"}) // notice {} is used
 // console.log(returnObject());
 
 
+// implemnting callback
+
+function powerOperations(num, power){
+    return power(num)
+}
+
+const square = (num) => num**2
+const cube = (num) => num**3
+const quad = (num) => num**4
+const fif = (num) => num**5
+
+const num = 2
+
+const squareer =  powerOperations(num, square)
+const cuber =  powerOperations(num, cube)
+const quader =  powerOperations(num, quad)
+const fiefer =  powerOperations(num, fif)
+
+// console.log(squareer);
+// console.log(cuber);
+// console.log(quader);
+// console.log(fiefer);
+
 
 //nested callbacks which sometimes become callback hell
 
@@ -82,8 +105,6 @@ function doAdd3(init, callback){
     const result = init + 3
     callback(result)
 }
-
-const init = 0
 
 function doAll(){
     doAdd1(0, (res1) => {

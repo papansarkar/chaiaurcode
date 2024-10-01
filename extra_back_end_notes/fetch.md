@@ -1,0 +1,1 @@
+[**The Fetch API is finally stable in Node.js**](https://blog.logrocket.com/fetch-api-node-js/#:~:text=and%20more%20natural.-,Cross%2Dplatform%20familiarity,functionality%20in%20a%20Node%20environment.)
