@@ -63,3 +63,36 @@ const addTwo = (num1, num2) => num1 + num2
 // returning objects from arrow function
 const returnObject = () => ({username: "Papan"}) // notice {} is used
 // console.log(returnObject());
+
+
+
+//nested callbacks which sometimes become callback hell
+
+function doAdd1(init, callback){
+    const result = init + 1
+    callback(result)
+}
+
+function doAdd2(init, callback){
+    const result = init + 2
+    callback(result)
+}
+
+function doAdd3(init, callback){
+    const result = init + 3
+    callback(result)
+}
+
+const init = 0
+
+function doAll(){
+    doAdd1(0, (res1) => {
+        doAdd2(res1, (res2) => {
+            doAdd3(res2, (res3) => {
+                console.log(res3);
+            })
+        } )
+    })
+}
+
+// doAll()
