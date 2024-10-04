@@ -2,9 +2,9 @@
 
 const coding = ["js", "java", "python", "kotlin", "rust"]
 
-// const values = coding.forEach( (item) => {
-//     return item //limitation od forEach()
-// } )
+const values = coding.forEach( (item) => {
+    return item //limitation of forEach()
+} )
 
 // console.log(values); // doesn't work
 
